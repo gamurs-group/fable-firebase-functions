@@ -14,11 +14,18 @@ Stable | Prerelease
 ```
 module Example
 
-// initialise the admin SDK
-admin.initializeApp() |> ignore
+open Fable.FirebaseAdmin.Globals
 
-let addMessage =
-    let handler (request : CloudFunctions.Request) (response : CloudFunctions.Response) =
+open Fable.FirebaseFunctions
+open Fable.FirebaseFunctions.Globals
+
+// initialise the admin SDK
+admin.initializeApp()
+|> ignore
+
+// Define a firebase function called 'test'
+let test =
+    let handler (request : Request) (response : Response) =
         response
             .send("Testing is fun")
             .``end``()

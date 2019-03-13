@@ -4,11 +4,12 @@ namespace rec Fable.FirebaseFunctions
 open Fable.Core
 open Fable.FirebaseFunctions
 
+
 module Globals =
-
     /// Global firebase function import
-    let [<Import("*","firebase-functions")>] functions: IExports = jsNative
+    let [<Import("*","firebase-functions")>] functions: FirebaseFunctions.IExports = jsNative
 
+module FirebaseFunctions =
     type [<AllowNullLiteral>] IExports =
         abstract analytics: Providers.Analytics.IExports
     //    abstract app: Providers.App.IExports

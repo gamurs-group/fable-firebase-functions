@@ -10,7 +10,7 @@ type [<AllowNullLiteral>] IExports =
     /// <summary>Handle HTTP requests.</summary>
     /// <param name="handler">A function that takes a request and response object,
     /// same signature as an Express app.</param>
-    abstract onRequest: handler: (CloudFunctions.Request -> CloudFunctions.Response -> unit) -> CloudFunctions.HttpsFunction
+    abstract onRequest: handler: (Request -> Response -> unit) -> CloudFunctions.HttpsFunction
     /// <summary>Declares a callable method for clients to call using a Firebase SDK.</summary>
     /// <param name="handler">A method that takes a data and context and returns a value.</param>
     abstract onCall: handler: (obj option -> CallableContext -> U2<obj option, Promise<obj option>>) -> obj
@@ -57,8 +57,8 @@ type [<AllowNullLiteral>] CallableContext =
     /// An unverified token for a Firebase Instance ID.
     abstract instanceIdToken: string option with get, set
     /// The raw request handled by the callable.
-    abstract rawRequest: CloudFunctions.Request with get, set
+    abstract rawRequest: Request with get, set
 
 type [<AllowNullLiteral>] TypeLiteral_01 =
     abstract uid: string with get, set
-    abstract token: Admin.Auth.DecodedIdToken with get, set
+    abstract token: FirebaseAdmin.Auth.DecodedIdToken with get, set

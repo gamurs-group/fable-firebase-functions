@@ -11,10 +11,10 @@ type [<AllowNullLiteral>] IExports =
     abstract user: unit -> UserBuilder
     abstract UserRecordMetadata: UserRecordMetadataStatic
     abstract UserBuilder: UserBuilderStatic
-    abstract userRecordConstructor: wireData: Object -> Admin.Auth.UserRecord
+    abstract userRecordConstructor: wireData: Object -> FirebaseAdmin.Auth.UserRecord
 
 type [<AllowNullLiteral>] UserRecordMetadata =
-    inherit Admin.Auth.UserMetadata
+    inherit FirebaseAdmin.Auth.UserMetadata
     abstract creationTime: string with get, set
     abstract lastSignInTime: string with get, set
     /// Returns a plain JavaScript object with the properties of UserRecordMetadata. 
@@ -39,4 +39,4 @@ type [<AllowNullLiteral>] UserBuilderStatic =
     [<Emit "new $0($1...)">] abstract Create: unit -> UserBuilder
 
 type UserRecord =
-    Admin.Auth.UserRecord
+    FirebaseAdmin.Auth.UserRecord

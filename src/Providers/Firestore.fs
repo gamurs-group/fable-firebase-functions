@@ -1,7 +1,7 @@
 // ts2fable 0.0.0
 module rec Fable.FirebaseFunctions.Providers.Firestore
 
-// TODO add FirebaseAdmin.Admin.Firestore bindings, and then uncomment this
+// TODO add FirebaseAdmin.Firestore bindings, and then uncomment this
 
 //open Fable.Core
 //open Fable.Import.JS
@@ -21,7 +21,7 @@ module rec Fable.FirebaseFunctions.Providers.Firestore
 //
 //
 //type DocumentSnapshot =
-//    Admin.Firestore.DocumentSnapshot
+//    FirebaseAdmin.Firestore.DocumentSnapshot
 //
 //type [<AllowNullLiteral>] DatabaseBuilder =
 //    abstract ``namespace``: ``namespace``: string -> NamespaceBuilder

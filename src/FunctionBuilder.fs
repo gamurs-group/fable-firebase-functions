@@ -49,9 +49,7 @@ type [<AllowNullLiteral>] TypeLiteral_01 =
 
 type [<AllowNullLiteral>] TypeLiteral_02 =
     /// Handle HTTP requests.
-    // TODO orig was:
-    // abstract onRequest: ((Express.Request -> Express.Response -> unit) -> obj) with get, set
-    abstract onRequest: ((CloudFunctions.Request -> CloudFunctions.Response -> unit) -> obj) with get, set
+    abstract onRequest: ((Request -> Response -> unit) -> obj) with get, set
     [<Emit "$0($1...)">] abstract Invoke : obj -> unit
     abstract HttpsFunction: obj with get, set
     /// Declares a callable method for clients to call using a Firebase SDK.

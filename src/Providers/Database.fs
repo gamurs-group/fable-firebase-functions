@@ -60,7 +60,7 @@ type [<AllowNullLiteral>] RefBuilderStatic =
 type [<AllowNullLiteral>] DataSnapshot =
     abstract instance: string with get, set
     /// Ref returns a reference to the database with full admin access. 
-    abstract ref: Admin.Database.Reference
+    abstract ref: FirebaseAdmin.Database.Reference
     abstract key: string
     abstract ``val``: unit -> obj option
     abstract exportVal: unit -> obj option
@@ -76,4 +76,4 @@ type [<AllowNullLiteral>] DataSnapshot =
     abstract toJSON: unit -> Object
 
 type [<AllowNullLiteral>] DataSnapshotStatic =
-    [<Emit "new $0($1...)">] abstract Create: data: obj option * ?path: string * ?app: Admin.App.App * ?instance: string -> DataSnapshot
+    [<Emit "new $0($1...)">] abstract Create: data: obj option * ?path: string * ?app: FirebaseAdmin.App.App * ?instance: string -> DataSnapshot

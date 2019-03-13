@@ -3,12 +3,8 @@
 module rec Fable.FirebaseFunctions.CloudFunctions
 
 open Fable.Core
-open Fable.Import
 open Fable.Import.JS
 open Fable.FirebaseFunctions
-
-type Request = express.Request
-type Response = express.Response
 
 type [<AllowNullLiteral>] IExports =
     abstract Change: ChangeStatic
