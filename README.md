@@ -11,8 +11,10 @@ Stable | Prerelease
 
 ## Example
 
+### express.RequestHandler function
+
 ```
-module Example
+module Example.Handler
 
 open Fable.FirebaseAdmin.Globals
 
@@ -34,6 +36,43 @@ let test =
 
 ```
 
+### express.Application
+
+```
+module Example.Application
+
+open Fable.FirebaseAdmin.Globals
+
+open Fable.FirebaseFunctions
+open Fable.FirebaseFunctions.Globals
+
+open Fable.Import
+open Fable.Core.JsInterop
+
+// initialise the admin SDK
+admin.initializeApp()
+|> ignore
+
+
+
+// Create an express.js application
+let private app = express.Invoke()
+
+let private nameHandler =
+    fun (req : Request) (res : Response) _ ->
+        res.send("Jim Bob") |> box
+
+let private ageHandler =
+    fun (req : Request) (res : Response) _ ->
+        res.send("23") |> box
+
+// Add some endpoints
+app.get(!^"/name", nameHandler) |> ignore
+app.get(!^"/age", ageHandler) |> ignore
+
+// Deploy the application as a cloud function at /api
+let api = Globals.functions.https.onRequest(app)
+```
 
 ## Development
 
