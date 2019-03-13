@@ -1,7 +1,9 @@
-// ts2fable 0.0.0
+/// Provider for defining Firebase HTTPS functions, see
+/// https://firebase.google.com/docs/functions/http-events#using_express_request_and_response_objects
 module rec Fable.FirebaseFunctions.Providers.Https
 
 open Fable.Core
+open Fable.Import
 open Fable.Import.JS
 open Fable.FirebaseAdmin
 open Fable.FirebaseFunctions
@@ -11,6 +13,9 @@ type [<AllowNullLiteral>] IExports =
     /// <param name="handler">A function that takes a request and response object,
     /// same signature as an Express app.</param>
     abstract onRequest: handler: (Request -> Response -> unit) -> CloudFunctions.HttpsFunction
+    /// <summary>Handle HTTP requests.</summary>
+    /// <param name="application">An Express.js application to bind to the function.</param>
+    abstract onRequest: application: express.Application -> CloudFunctions.HttpsFunction
     /// <summary>Declares a callable method for clients to call using a Firebase SDK.</summary>
     /// <param name="handler">A method that takes a data and context and returns a value.</param>
     abstract onCall: handler: (obj option -> CallableContext -> U2<obj option, Promise<obj option>>) -> obj
