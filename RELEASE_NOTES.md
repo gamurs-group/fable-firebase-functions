@@ -1,3 +1,6 @@
+#### 0.2.1
+* Fix: Include functions provider source in the package bundle.
+
 #### 0.2.0
 * Add support for registering Express.js applications as Firebase functions
 
