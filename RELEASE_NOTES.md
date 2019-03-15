@@ -1,3 +1,6 @@
+#### 0.2.3
+* Upgrade FirebaseAdmin dependency to latest
+
 #### 0.2.2
 * Upgrade FirebaseAdmin dependency to latest
 
