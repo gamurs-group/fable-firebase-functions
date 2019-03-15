@@ -1,3 +1,6 @@
+#### 0.2.2
+* Upgrade FirebaseAdmin dependency to latest
+
 #### 0.2.1
 * Fix: Include functions provider source in the package bundle.
 
