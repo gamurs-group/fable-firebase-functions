@@ -15,7 +15,7 @@ module FirebaseFunctions =
         abstract auth: Providers.Auth.IExports
         abstract crashlytics: Providers.Crashlytics.IExports
         abstract database: Providers.Database.IExports
-    //    abstract firestore: Providers.Firestore.IExports
+        abstract firestore: Providers.Firestore.IExports
         abstract https: Providers.Https.IExports
         abstract pubsub: Providers.Pubsub.IExports
         abstract remoteConfig: Providers.RemoteConfig.IExports

@@ -1,3 +1,6 @@
+#### 0.4.1
+* Fix: Enable firestore in Globals module
+
 #### 0.4.0
 * Add support for writing Cloud Firestore-triggered Firebase functions
 
