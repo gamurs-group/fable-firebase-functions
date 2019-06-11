@@ -1,3 +1,6 @@
+#### 0.4.0
+* Add support for writing Cloud Firestore-triggered Firebase functions
+
 #### 0.3.1
 * Update Fable.FirebaseAdmin dependency to latest
 
