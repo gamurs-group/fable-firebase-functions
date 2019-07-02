@@ -1,4 +1,4 @@
-namespace Fable.FirebaseFunctions.CloudFunctions
+namespace rec Fable.FirebaseFunctions.CloudFunctions
 
 type [<AllowNullLiteral>] ScheduleRetryConfig =
     abstract retryCount: float option with get, set

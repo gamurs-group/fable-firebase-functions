@@ -1,6 +1,5 @@
 // ts2fable 0.0.0
-[<RequireQualifiedAccess>]
-module rec Fable.FirebaseFunctions.CloudFunctions
+namespace rec Fable.FirebaseFunctions.CloudFunctions
 
 open Fable.Core
 open Fable.Import.JS
