@@ -14,6 +14,7 @@
         <PackageTags>F#, fsharp, fable2, fable-bindings, firebase, firebase-admin, firebase-functions</PackageTags>
     </PropertyGroup>
     <ItemGroup>
+        <Compile Include="CloudFunctions.Types.fs" />
         <Compile Include="FirebaseFunctions.Types.fs" />
         <Compile Include="Utils.fs" />
         <Compile Include="CloudFunctions.fs" />
