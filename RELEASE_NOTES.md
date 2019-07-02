@@ -1,3 +1,6 @@
+#### 0.4.2
+* Add support for writing Scheduled Firebase Functions
+
 #### 0.4.1
 * Fix: Enable firestore in Globals module
 
